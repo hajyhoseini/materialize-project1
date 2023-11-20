@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../javascriptcodes/omidProject"
+		},
+		{
+			"path": "../../../javascriptcodes"
+		},
+		{
+			"path": "../../../test1"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "materialaze-project2"
+	}
+}
