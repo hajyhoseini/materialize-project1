@@ -1,0 +1,22 @@
+#search_container{
+    margin-top: 40px !important;
+}
+.zoo{
+    z-index: 1000;
+}
+.waves-effect{
+    z-index: 2 !important;
+}
+.search-top-title{
+font-size: 1.7rem;
+}
+.subtitl2 {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 4px solid #4a148c;
+    margin-top: 5px;
+    color: black;
+    background-color: pink;
+}.pagination li.active {
+    background-color:#df1313 ;
+}

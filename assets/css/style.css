@@ -1,3 +1,12 @@
+:root{
+    --primary-color : #880e4f;
+    --secondary-color:#4a148c;
+    --light-pink:pink;
+    --transition-200:all 200ms ease;
+
+}
+
+
 @font-face {
     font-family: BYekan;
     src: url("../fonts/BYekan-webfont.eot")format("eot"),
@@ -5,6 +14,66 @@
     url("../fonts/BYekan-webfont.ttf")format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+#gallery_section{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(46, 30, 46, 0.95);
+    z-index: 7000000000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+#gallery_section.active{
+  transform: scale(1);
+  opacity: 1;
+}
+#gallery_section i{
+position: absolute;
+top: 5px;
+left: 5px;
+cursor: pointer;
+}
+.shafaf{
+color: black;
+font-size: 20px;
+}
+.d_block{
+    display: block;
+}
+.chip {
+    margin-right: 0;
+    margin-left: 5px;
+    background-color: pink;
+    
+}
+.ptm-100{
+    padding-top: 100px;
+}
+.ptm-150{
+    padding-top: 150px;
+}
+.ptm-200{
+    padding-top: 200px;
+}
+.mb_4{
+    margin-bottom: 2rem !important;
+}
+.fixed-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300000000;
+}
+.header{
+    position: fixed;
+    z-index: 100000000;
 }
 *{
     font-family: "BYekan";
@@ -29,7 +98,7 @@
 nav ul li a:hover{
     background: transparent;
 }
-.pink-text.text-darken-4{
+.pink-text .text-darken-4{
     color: black !important;
 }
 .top_carousel{
@@ -39,6 +108,15 @@ nav ul li a:hover{
     min-height:100% !important;
     width: unset !important;
     min-width:100% !important ;
+}
+.text-justify{
+    text-align: justify !important;
+}
+nav .brand-logo img {
+    width: 100%;
+    filter: drop-shadow(0 0 1px white);
+    transition: all 200ms ease;
+    border-radius: 20px;
 }
 .top_text{
     position: absolute;
@@ -66,17 +144,20 @@ nav ul li a:hover{
     margin-top: 2rem !important;
 
 }
+.pink-text {
+    color: #e91e63 !important;
+  }
 .subtitl{
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 4px solid #880e4f;
     margin-top: 5px;
 }
-.simple_item{
+.simple_item2 , .simple_item{
     height: 30vh;
     padding: 0.5rem;
 }
-.simple_item .image{
+.simple_item2 .image , .simple_item .image{
     height: 100% !important;
     width: 100% !important;
     border-radius: 5px;
@@ -85,7 +166,7 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;        
 }
-.simple_item .image::after{
+.simple_item2 .image::after , .simple_item .image::after{
     content: "مشاهده گالری";
     display: flex;
     justify-content: center;
@@ -101,8 +182,35 @@ nav ul li a:hover{
     color: #f8bbd0;
     border-radius: 5px !important;
 }
+.top_image img{
+    width: 50vw;
+}
+#comments_container{
+    background: rgba(255 , 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.h_100{
+    height: 100% !important;
+}
+.my_1{
+    margin-top:0.5rem !important;
+    margin-bottom:0.5rem !important ;
+}
+.py_1{
+    padding-top:0.5rem !important;
+    padding-bottom:0.5rem !important ;
+}
+.px_2{
+    padding-left:1rem !important ;
+    padding-right:1rem !important ;
+}
 .mt_8{
-    margin-bottom:4rem ;
+    margin-top:4rem !important;
 }
 .card-image img {
     height: 250px ;
@@ -110,10 +218,10 @@ nav ul li a:hover{
 #simple_work4{
     height: 80px !important;
 }
-.simple_item:hover .image::after{
+.simple_item2:hover .image::after , .simple_item:hover .image::after{
 transform: scale(1);
 }
-.simple_item .image img{
+.simple_item2 .image img ,.simple_item .image img{
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
@@ -121,6 +229,7 @@ transform: scale(1);
     -moz-object-fit:cover;
     -webkit-object-fit:cover;
 }
+
 .subtitl2{
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -147,6 +256,9 @@ transform: scale(1);
 }
 .w_100{
     width: 100% !important;
+}
+.p_2{
+    padding: 1rem !important;
 }
 .quick_item{
     transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
@@ -203,8 +315,8 @@ nav .brand-logo img{
     transition: all 200ms ease;
 }
 nav .brand-logo img:hover{
-    filter: drop-shadow(0 0 5px #f8bbd0);
-    -webkit-filter: drop-shadow(0 0 5px #f8bbd0);
+    filter: drop-shadow(0 0 5px #880e4f);
+    -webkit-filter: drop-shadow(0 0 5px #880e4f);
 }
 .navbar_ul{
     display: flex;
@@ -275,6 +387,9 @@ nav .brand-logo img:hover{
     position: relative;
     margin: auto;
 }
+.position-reletive{
+    position: relative !important;
+}
  .center-align {
     text-align: center;
    }
@@ -287,6 +402,12 @@ nav .brand-logo img:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 10001;
+    }
+    .d_flex_between{
+        display: flex;
+        justify-content: space-between;
+        z-index: 10005 !important;
     }
     #mobile-demo li{
         width: 100%;
@@ -311,9 +432,31 @@ nav .brand-logo img:hover{
     -webkit-filter: drop-shadow(0 0 5px black);
     -moz-filtr:drop-shadow(0 0 5px black);
 }
-
+.my_2{
+    margin: 1rem !important;
+}
 @media(min-width:992px){
     nav .brand-logo{
         right: 5px !important;
+    }
+}
+.my_1{
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+#gallery_section .gallery_content{
+width: 100%;
+height: 80vh;
+}
+#gallery_section .carousel-item{
+    height: 100% !important;
+    width: 30vw;
+}
+#gallery_section .carousel-item img{
+    border-radius: 10px;
+}
+@media(max-width:900px){
+    #gallery_section .carousel-item{
+        width: 40vw;
     }
 }
